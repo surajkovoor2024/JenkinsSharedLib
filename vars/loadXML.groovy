@@ -10,7 +10,7 @@ def call() {
   println("${xml.name()}")
   println("${xml.toString()}")
   // Find the ENV element based on the selected Country name
-  def selectedENV = xml.find{it.ENV.name == "DEV"}
+  def selectedENV = xml.ENV.find{it.name == "DEV"}
   println("Finding ENV Detail")
   println("${selectedENV.text()}")
   println("${selectedENV.PowerOption.text()}")
