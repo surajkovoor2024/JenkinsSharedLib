@@ -3,4 +3,8 @@ def call() {
   def xmlContent = CountrysXmlFile.text
   println("XML reading Starting")
   println("${xmlContent }")
+
+  def xmlValue = libraryResource("paramValues.xml")
+  println("Another XML reading Starting")
+  println("${xmlContent }")
 }
