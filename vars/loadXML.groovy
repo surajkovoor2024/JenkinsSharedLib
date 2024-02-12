@@ -8,8 +8,8 @@ def call() {
   def xml = new XmlSlurper().parseText(xmlValue)
   println("${xml.text()}")
   // Find the ENV element based on the selected Country name
-  def selectedENV = xml.variables.ENV.find { it.name.text() == 'DEV' }
+  def selectedENV = xml.find { it.name.text() == 'DEV' }
   println("Finding ENV Detail")
-  println("${selectedENV}")
+  println("${selectedENV.text()}")
   println("${selectedENV.PowerOption.text()}")
 }
