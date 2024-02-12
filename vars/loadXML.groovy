@@ -5,6 +5,9 @@ def call() {
   println("${xmlContent }")
 
   def xmlValue = libraryResource("paramValues.xml")
-  println("Another XML reading Starting")
-  println("${xmlContent }")
+  def xml = new XmlSlurper().parseText(xmlValue)
+  // Find the ENV element based on the selected Country name
+  def selectedENV = xml.variables.find { it.ENV.text() == 'DEV' }
+  println("Finding ENV Detail")
+  println("${selectedENV}")
 }
