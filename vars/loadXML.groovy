@@ -8,6 +8,7 @@ def call() {
   def xml = new XmlSlurper().parseText(xmlValue)
   println("${xml.text()}")
   println("${xml.name()}")
+  println("${xml.toString()}")
   // Find the ENV element based on the selected Country name
   def selectedENV = xml.ENV.find{it.name.text() == "DEV"}
   println("Finding ENV Detail")
