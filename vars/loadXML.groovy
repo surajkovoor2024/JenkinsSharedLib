@@ -16,7 +16,7 @@ def call() {
     env.envid.toInteger() > 1
   }
 
-  println("Test")
+  println("Size: ${personsOver28.size()}")
   
   personsOver28.each { person ->
     println "Name: ${person.envname.text()}, Age: ${person.envage.text()}"
