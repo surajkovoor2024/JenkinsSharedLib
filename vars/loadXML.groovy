@@ -13,9 +13,9 @@ def call() {
   //  //println list.technology.findAll { it.name == "Groovy" }.technology.name
 
 
-    def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
-    def xmlContent = CountrysXmlFile.text
-    def articles = new XmlParser().parse(xmlContent)
+    def xmlFile = getClass().getResourceAsStream("articles.xml")
+
+    def articles = new XmlParser().parse(xmlFile)
 
     then: "Xml is loaded properly"
     articles.'*'.size() == 4
