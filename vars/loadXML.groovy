@@ -1,4 +1,5 @@
 def call() {
+import groovy.xml.slurpersupport.GPathResult
 try{
 def selectedCountry = "India"
 println("Selected Country : ${selectedCountry}")
