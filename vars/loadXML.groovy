@@ -5,7 +5,7 @@ def call() {
     list.technology.name.text() // dot notation
     println list['technology']['name'].text() // square bracket notation
 
-    def personsOver28 = list.technology.findAll { env -> env.name == "Groovy" }
+    def personsOver28 = list.technology.find { env -> env.name === "Groovy" }
     personsOver28.each { person -> println "Name: ${person.name.text()}" }
 }
 
