@@ -14,7 +14,7 @@ def call() {
 
     def xmlFile = getClass().getResourceAsStream("paramValues.xml")
 
-    def articles = new XmlParser().parse(xmlFile)
+    def articles = new groovy.util.XmlParser().parse(xmlFile)
 
     then: "Xml is loaded properly"
     articles.'*'.size() == 4
