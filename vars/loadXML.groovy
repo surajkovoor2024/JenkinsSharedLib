@@ -19,7 +19,7 @@ def call() {
     then: "Xml is loaded properly"
     articles.'*'.size() == 4
     articles.article[0].author.firstname.text() == "Siena"
-    articles.article[2].'release-date'.text() == "2018-06-12"
+    articles.article[2].release-date.text() == "2018-06-12"
     articles.article[3].title.text() == "Java 12 insights"
     articles.article.find { it.author.'@id'.text() == "3" }.author.firstname.text() == "Daniele"
 }
