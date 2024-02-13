@@ -7,9 +7,10 @@ def call() {
   def xml = new XmlSlurper().parseText(xmlValue)
   //println("${xml.text()}")
   println("RootName: ${xml.name()}")
-  println("RootName: ${xml.env[0].envname.text()}")  
+  //println("RootName: ${xml.env.envname}")  
   // Find the ENV element based on the selected Country name
-  def selectedENV = xml.env.find {it.envname.text() == "DEV"}
+  assert xml.env.envname == 'DEV' 
+  def selectedENV = xml.env.find {it.envname == "DEV"}
   println("Finding ENV Detail: ${selectedENV.name()}")
   println("Finding ENV Detail: ${selectedENV.size()}")
   println("${selectedENV.PowerOption.text()}")
