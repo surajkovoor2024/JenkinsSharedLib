@@ -3,8 +3,8 @@ def call() {
   def xmlContent = CountrysXmlFile.text
   println("XML reading Starting")
   println("${xmlContent }")
-  def xmlValue = libraryResource("paramValues.xml")
-  def xml = new XmlSlurper().parseText(xmlValue)
+  //def xmlValue = libraryResource("paramValues.xml")
+  def xml = new XmlSlurper().parseText(xmlContent)
   //println("${xml.text()}")
   println("RootName: ${xml.name()}")
   //println("RootName: ${xml.env.envname}")  
