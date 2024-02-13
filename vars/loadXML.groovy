@@ -13,8 +13,7 @@ def call() {
   def abc = "DEV"
   println("Variable: ${abc}");
   println(abc);
-  xml.env.find {it.envname == abc}
-  
+  xml.env.find {it.envname.text() == abc}  
   //def selectedENV = xml.env.find {it.envname == "DEV"}
   //println("Finding ENV Detail: ${selectedENV.size()}")
   //println("Finding ENV Detail: ${selectedENV.envname}")
