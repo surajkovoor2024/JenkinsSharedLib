@@ -8,7 +8,7 @@ def call() {
     println 'Step1'
     def personsOver28 = list.technology.find { it.name.text() == 'Groovy' }
     println 'Step2'
-    personsOver28.each { person -> println "Name: ${person.name}" }
+    list.technology.each { person -> println "Name: ${person.name}" }
     println 'Step3'
 }
 
