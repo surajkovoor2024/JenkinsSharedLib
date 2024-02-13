@@ -8,7 +8,10 @@ def call() {
   def parser = new XmlParser()
   def list = parser.parseText(text)
 
-
+  list.each { person ->
+    println "Name: ${person.env.envname.text()}, Age: ${person.env.envage.text()}"
+  }
+  
   println list.env.envname.text()
   
   
