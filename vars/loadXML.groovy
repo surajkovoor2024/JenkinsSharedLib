@@ -1,6 +1,5 @@
+import groovy.xml.*
 def call() {
-    import groovy.xml.*
-
     def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
       def xmlContent = CountrysXmlFile.text
     def list = new XmlSlurper().parseText(xmlContent)
