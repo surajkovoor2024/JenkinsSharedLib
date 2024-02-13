@@ -12,9 +12,9 @@ def call() {
   //  //println list.technology.findAll { it.name == "Groovy" }.technology.name
 
 
-    def xmlFile = getClass().getResourceAsStream("paramValues.xml")
+    def xmlFile = getClass().getResourceAsStream("//10.206.6.73/Shared/XML/paramValues.xml")
     
-    def articles = new groovy.util.XmlSlurper().parse(xmlFile)
+    def articles =  new XmlSlurper().parseText(xmlFile)
 
     then: "Xml is loaded properly"
     articles.'*'.size() == 4
