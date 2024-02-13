@@ -1,19 +1,29 @@
 def call() {
-  def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
-  //def xmlContent = CountrysXmlFile.text
-  def xmlContent = xmlParser.parseText(CountrysXmlFile)
-  println("XML reading Starting")
-  println("${xmlContent}")
-  //def xmlValue = libraryResource("paramValues.xml")
-  def xml = new XmlSlurper().parseText(xmlContent)
-  println("${xml.env[0].envname}")
-  //println("RootName: ${xml.name()}")
-  //println("RootName: ${xml.env.envname}")  
-  // Find the ENV element based on the selected Country name
-  //assert xml.env.envname == "DEV"  
-  def personsOver28 = xml.children().findAll {env -> env.envid.toInteger() > 1}
-  println("Size: ${personsOver28.size()}")
-  //personsOver28.each { person ->
-    //println "Name: ${person.envname.text()}, Age: ${person.envage.text()}"
-  }
+try{
+def selectedCountry = "India"
+println("Selected Country : ${selectedCountry}")
+def CountrysXmlFile = new File("//172.16.0.16/Published/ChoiceParameter/Cities.xml")
+def xmlContent = CountrysXmlFile.text
+
+println("XML reading Starting")
+// Use XMLSlurper to parse the XML content
+def xml = new XmlSlurper().parseText(xmlContent)
+
+println("XML reading worked")
+
+// Find the Country element based on the selected Country name
+def selectedCountryElement = xml.country.find { it.name.text() == selectedCountry }
+
+// Extract cities from the selected Country element
+def stateOptions = selectedCountryElement?.States.state.collect { it.name.text() }
+
+def htmlChoices = stateOptions.collect { "<option>${it}</option>" }.join('\n')
+
+} catch (Exception e) {
+    // Log the error (useful for troubleshooting)
+    println("Error reading XML file or parsing XML content: ${e.message}")
+def errorstr = e.getMessage()
+    // Return a default message or an empty dropdown in case of an error
+}
+}
 
