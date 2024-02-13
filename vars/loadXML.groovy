@@ -12,7 +12,7 @@ def call() {
   //  //println list.technology.findAll { it.name == "Groovy" }.technology.name
 
 
-    def xmlFile = getClass().getResourceAsStream("articles.xml")
+    def xmlFile = getClass().getResourceAsStream("paramValues.xml")
 
     def articles = new XmlParser().parse(xmlFile)
 
