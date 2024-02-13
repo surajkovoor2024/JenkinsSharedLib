@@ -10,10 +10,21 @@ def call() {
   //println("RootName: ${xml.env.envname}")  
   // Find the ENV element based on the selected Country name
   //assert xml.env.envname == "DEV"
-  def abc = "DEV"
-  println("Variable: ${abc}");
-  println(abc);
-  xml.env.find {it.envname.text() == abc}  
+  
+  
+  def personsOver28 = xml.env.findAll { env ->
+    env.envid.toInteger() > 1
+  }
+
+  personsOver28.each { person ->
+    println "Name: ${person.envname.text()}, Age: ${person.envage.text()}"
+  }
+
+  
+  //xml.env.find {it.envname.text() == abc}  
+ // xml.env.find { node ->
+//      node.envname == 'book' && node.@id == '2'
+//  }
   //def selectedENV = xml.env.find {it.envname == "DEV"}
   //println("Finding ENV Detail: ${selectedENV.size()}")
   //println("Finding ENV Detail: ${selectedENV.envname}")
