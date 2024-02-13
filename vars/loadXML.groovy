@@ -9,7 +9,7 @@ def call() {
   println("RootName: ${xml.name()}")
   //println("RootName: ${xml.env.envname}")  
   // Find the ENV element based on the selected Country name
-  assert xml.env.envname == "DEV"
+  //assert xml.env.envname == "DEV"
   def selectedENV = xml.env.find {it.envname == "DEV"}
   println("Finding ENV Detail: ${selectedENV.name()}")
   println("Finding ENV Detail: ${selectedENV.size()}")
