@@ -10,11 +10,9 @@ def call() {
   //println("RootName: ${xml.env.envname}")  
   // Find the ENV element based on the selected Country name
   //assert xml.env.envname == "DEV"  
-  def personsOver28 = xml.children().findAll { env ->
-    env.envid.toInteger() > 1
-  }
+  def personsOver28 = xml.children().findAll {env -> env.envid.toInteger() > 1}
   println("Size: ${personsOver28.size()}")
-  personsOver28.each { person ->
-    println "Name: ${person.envname.text()}, Age: ${person.envage.text()}"
+  //personsOver28.each { person ->
+    //println "Name: ${person.envname.text()}, Age: ${person.envage.text()}"
   }
 
