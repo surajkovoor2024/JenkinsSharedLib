@@ -8,8 +8,7 @@ def call() {
     println 'Step1'
     def personsOver28 = list.technology.find { it.name == 'Groovy' }
     println 'Step2'
-    println XmlUtil.serialize( personsOver28 )
-    println 'Step3'
     personsOver28.each { person -> println "Name: ${person.name.text()}" }
+    println 'Step3'
 }
 
