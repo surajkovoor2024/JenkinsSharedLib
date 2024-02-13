@@ -14,7 +14,7 @@ def call() {
 
     def xmlFile = getClass().getResourceAsStream("//10.206.6.73/Shared/XML/paramValues.xml")
     
-    def articles =  new XmlSlurper().parseText(xmlFile)
+    def articles = new XmlParser().parse(xmlFile)
 
     then: "Xml is loaded properly"
     articles.'*'.size() == 4
