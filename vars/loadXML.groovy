@@ -10,5 +10,6 @@ def call() {
     println 'Step2'
     list.technology.each { person -> println "Name: ${person.name}" }
     println 'Step3'
+    println list.technology.findAll { it.name == "Groovy" }.technology.name
 }
 
