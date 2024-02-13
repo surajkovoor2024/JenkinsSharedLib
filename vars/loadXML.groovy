@@ -11,6 +11,8 @@ def call() {
   // Find the ENV element based on the selected Country name
   //assert xml.env.envname == "DEV"
   def abc = "DEV"
+  println("Variable: ${abc}");
+  println(abc);
   xml.env.find {it.envname == abc}
   
   //def selectedENV = xml.env.find {it.envname == "DEV"}
