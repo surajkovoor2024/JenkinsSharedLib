@@ -12,7 +12,7 @@ def call() {
   //assert xml.env.envname == "DEV"
   
   
-  def personsOver28 = xml.env.findAll { env ->
+  def personsOver28 = xml.children().findAll { env ->
     env.envid.toInteger() > 1
   }
 
