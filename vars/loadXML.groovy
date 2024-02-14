@@ -27,6 +27,7 @@ println("XML reading worked")
 
 // Find the Country element based on the selected Country name
 def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
+println selectedCountryElement
 return selectedCountryElement
 }
 
