@@ -34,13 +34,15 @@ println selectedCountryElement
 println "Step1"
 def selectedTitle  = xml.article.find { it.title == "Test" }
 println "Step1.1"
-println xml.article.find { it.title.text() == "Test" }.author.firstname.text()
+selectedTitle = xml.article.find { it.title.text() == "Test" }.author.firstname.text()
+println "Step1.2"
+def selectedTitle1 = xml.article.find { it.title.text() == "Test" }
 println "Step2"
-println selectedTitle
+println selectedTitle1.title.collect { it.text() }
 println "Step3"
-selectedTitle.text()
+selectedTitle1.text()
 println "Step4"
-return selectedTitle.author.firstname.collect { it.text() }
+return selectedTitle1//.author.firstname.collect { it.text() }
 
 }
 
