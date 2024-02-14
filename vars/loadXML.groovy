@@ -12,11 +12,15 @@ def call() {
   //  //println list.technology.findAll { it.name == "Groovy" }.technology.name
 
 
-    def xmlFile = getClass().getResourceAsStream("//10.206.6.73/Shared/XML/paramValues.xml")
-    
-    def articles = new XmlParser().parse(xmlFile)
+  //  def xmlFile = getClass().getResourceAsStream("//10.206.6.73/Shared/XML/paramValues.xml")    
+  //  def articles = new XmlParser().parse(xmlFile)
+  //  then: "Xml is loaded properly"
 
-    then: "Xml is loaded properly"
+    def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
+    def xmlContent = CountrysXmlFile.text
+    def articles = new XmlSlurper().parseText(xmlContent)
+
+  
     articles.'*'.size() == 4
     articles.article[0].author.firstname.text() == "Siena"
     articles.article[2].release-date.text() == "2018-06-12"
