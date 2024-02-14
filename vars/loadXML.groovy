@@ -16,15 +16,17 @@ def call() {
   //  def articles = new XmlParser().parse(xmlFile)
   //  then: "Xml is loaded properly"
 
-    def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
-    def xmlContent = CountrysXmlFile.text
-    def articles = new XmlSlurper().parseText(xmlContent)
+   def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
+def xmlContent = CountrysXmlFile.text
 
-  
-    articles.'*'.size() == 4
-    articles.article[0].author.firstname.text() == "Siena"
-    articles.article[2].release-date.text() == "2018-06-12"
-    articles.article[3].title.text() == "Java 12 insights"
-    articles.article.find { it.author.'@id'.text() == "3" }.author.firstname.text() == "Daniele"
+println("XML reading Starting")
+// Use XMLSlurper to parse the XML content
+def xml = new XmlSlurper().parseText(xmlContent)
+
+println("XML reading worked")
+
+// Find the Country element based on the selected Country name
+def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
+return selectedCountryElement
 }
 
