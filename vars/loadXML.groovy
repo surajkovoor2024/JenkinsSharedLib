@@ -32,7 +32,7 @@ println xml.article.author.firstname
 println selectedCountryElement
 //return selectedCountryElement
 println "Step1"
-def selectedTitle  = xml.article.find { it.title == "Test" }.size()
+def selectedTitle  = xml.article.find { it.title == "Test" }
 println "Step2"
 println selectedTitle
 println "Step3"
