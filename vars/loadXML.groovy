@@ -29,6 +29,9 @@ println("XML reading worked")
 def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
 println xml.article.author.firstname
 println selectedCountryElement
-return selectedCountryElement
+//return selectedCountryElement
+def selectedTitle  = xml.article.find { it.title == "Test" }
+return selectedTitle.author.firstname.collect { it.text() }
+
 }
 
