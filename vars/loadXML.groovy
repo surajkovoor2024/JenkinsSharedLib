@@ -30,7 +30,11 @@ def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
 println xml.article.author.firstname
 println selectedCountryElement
 //return selectedCountryElement
+println "Step1"
 def selectedTitle  = xml.article.find { it.title == "Test" }
+println "Step2"
+println selectedTitle
+println "Step3"
 return selectedTitle.author.firstname.collect { it.text() }
 
 }
