@@ -31,11 +31,11 @@ println xml.article.author.firstname
 println selectedCountryElement
 //return selectedCountryElement
 println "Step1"
-def selectedTitle  = xml.article.Find { it.title == "Test" }
+def selectedTitle  = xml.article.find { it.title == "Test" }
 println "Step2"
-println selectedTitle.
+println selectedTitle
 println "Step3"
-selectedTitle.article.title.collect { it.text() }
+selectedTitle.text()
 println "Step4"
 return selectedTitle.author.firstname.collect { it.text() }
 
