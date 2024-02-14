@@ -22,7 +22,7 @@ def xmlContent = CountrysXmlFile.text
 println("XML reading Starting")
 // Use XMLSlurper to parse the XML content
 //def xml = new XmlSlurper().parseText(xmlContent)
-def xml = new XmlParser().parse(xmlContent)
+def xml = new XmlParser().parseText(xmlContent)
 
 println("XML reading worked")
 
