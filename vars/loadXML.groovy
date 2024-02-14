@@ -16,7 +16,7 @@ def call() {
   //  def articles = new XmlParser().parse(xmlFile)
   //  then: "Xml is loaded properly"
 
-   def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
+def CountrysXmlFile = new File("//10.206.6.73/Shared/XML/paramValues.xml")
 def xmlContent = CountrysXmlFile.text
 
 println("XML reading Starting")
@@ -31,7 +31,7 @@ println xml.article.author.firstname
 println selectedCountryElement
 //return selectedCountryElement
 println "Step1"
-def selectedTitle  = xml.article.find { it.title == "Test" }
+def selectedTitle  = xml.article.find { it.title == "Test" }.article.title.collect {it.text() }
 println "Step2"
 println selectedTitle
 println "Step3"
