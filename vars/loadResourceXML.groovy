@@ -6,8 +6,15 @@ def call(selectedEnv) {
             println("Empty Environment");
             return ["Unknown Environment from Git"]
         } else { 
+            println "Get Prop"
             def props = selectedEnv.properties
             println props
+
+            println "Get Methods"
+            def methods = selectedEnv.metaClass.methods.findAll { it.declaringClass == hudson.model.Environment }
+            // Print the list
+            println methods
+
 
             println "Selected Environment: ${(selectedEnv as java.lang.String)}"
 
