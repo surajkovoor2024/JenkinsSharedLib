@@ -1,4 +1,4 @@
-def call(String selectedEnv = 'DEV') {
+def call(String selectedEnv) {
 println "Selected Environment: ${selectedEnv}"
 
 println("XML reading Starting")
@@ -8,7 +8,6 @@ println xmlContent
 def xml = new XmlParser().parseText(xmlContent)
 
 println("XML reading worked")
-
 // Find the Country element based on the selected Country name
 def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
 println xml.article.author.firstname
