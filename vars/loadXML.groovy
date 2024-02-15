@@ -43,8 +43,6 @@ println "Step2"
 selectedTitle1 = selectedTitle1.author.collect { it.firstname.text() }
 println selectedTitle1
 println "Step3"
-selectedTitle1.text()
-println "Step4"
 return selectedTitle1//.author.firstname.collect { it.text() }
 
 }
