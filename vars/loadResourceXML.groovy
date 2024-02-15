@@ -4,7 +4,7 @@ def call(selectedEnv) {
         if (selectedEnv == null || selectedEnv == '') { 
             //If the condition is true print the following statement 
             println("Empty Environment");
-            return ["Unknow Evnrionment"]
+            return ["Unknown Environment from Git"]
         } else { 
             println "Selected Environment: ${selectedEnv}"
 
@@ -40,5 +40,6 @@ def call(selectedEnv) {
         println ex.getMessage()
         println ex.getCause()
         println ex.fillInStackTrace()
+        return ["Unknown Environment from git ex"]
     }
 }
