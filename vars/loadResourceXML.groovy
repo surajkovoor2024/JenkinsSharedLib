@@ -1,6 +1,6 @@
 def call(String selectedEnv) {
 println "Selected Environment: ${selectedEnv}"
-
+echo selectedEnv
 println("XML reading Starting")
 def xmlContent = libraryResource('paramValues.xml')
 println xmlContent
