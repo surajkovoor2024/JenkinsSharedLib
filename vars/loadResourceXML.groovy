@@ -6,7 +6,7 @@ def call(selectedEnv) {
             println("Empty Environment");
             return ["Unknown Environment from Git"]
         } else { 
-            println "Selected Environment: ${selectedEnv.env}"
+            println "Selected Environment: ${(selectedEnv as java.lang.String).toString()}"
 
             println("XML reading Starting")
             def xmlContent = libraryResource('paramValues.xml')
