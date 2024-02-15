@@ -6,6 +6,9 @@ def call(selectedEnv) {
             println("Empty Environment");
             return ["Unknown Environment from Git"]
         } else { 
+            def props = selectedEnv.properties
+            println props
+
             println "Selected Environment: ${(selectedEnv as java.lang.String)}"
 
             println("XML reading Starting")
@@ -21,7 +24,7 @@ def call(selectedEnv) {
             println selectedCountryElement
             //return selectedCountryElement
             println "Step1"
-            def selectedTitle  = xml.article.find { it.env == selectedEnv.env }
+            def selectedTitle  = xml.article.find { it.env == selectedEnv }
             println "Step1.1"
             //selectedTitle = xml.article.find { it.env.text() == selectedEnv }.author.firstname.text()
             println selectedTitle
