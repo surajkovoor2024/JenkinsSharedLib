@@ -6,7 +6,7 @@ def call(selectedEnv) {
             println("Empty Environment");
             return ["Unknown Environment from Git"]
         } else { 
-            println "Selected Environment: ${selectedEnv}"
+            println "Selected Environment: ${selectedEnv.env}"
 
             println("XML reading Starting")
             def xmlContent = libraryResource('paramValues.xml')
@@ -21,7 +21,7 @@ def call(selectedEnv) {
             println selectedCountryElement
             //return selectedCountryElement
             println "Step1"
-            def selectedTitle  = xml.article.find { it.env == selectedEnv }
+            def selectedTitle  = xml.article.find { it.env == selectedEnv.env }
             println "Step1.1"
             //selectedTitle = xml.article.find { it.env.text() == selectedEnv }.author.firstname.text()
             println selectedTitle
