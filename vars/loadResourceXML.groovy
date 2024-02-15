@@ -1,4 +1,4 @@
-def call(String selectedEnv) {
+def call(String selectedEnv = 'DEV') {
 println "Selected Environment: ${selectedEnv}"
 
 println("XML reading Starting")
