@@ -1,4 +1,8 @@
 def call(selectedEnv) {
+    try{
+
+
+
 println "Selected Environment: ${selectedEnv}"
 
 println("XML reading Starting")
@@ -26,5 +30,10 @@ selectedTitle1 = selectedTitle1.author.collect { it.env.text() }
 println selectedTitle1
 println "Step3"
 return selectedTitle1//.author.firstname.collect { it.text() }
-
+     }catch(Exception ex) {
+         println("Catching the exception");
+         println ex.getMessage()
+         println ex.getCause()
+         println ex.fillInStackTrace()
+      }
 }
