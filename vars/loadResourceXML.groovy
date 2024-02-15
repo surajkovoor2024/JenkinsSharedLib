@@ -35,6 +35,7 @@ def call(selectedEnv) {
             return selectedTitle1//.author.firstname.collect { it.text() }
         } 
     }catch(Exception ex) {
+        println "Error Block"
         println selectedEnv
         println("Catching the exception");
         println ex.getMessage()
