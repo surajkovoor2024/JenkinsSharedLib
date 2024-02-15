@@ -40,7 +40,8 @@ println "Step1.2"
 def selectedTitle1 = xml.article.find { it.title.text() == "Test" }
 println selectedTitle1
 println "Step2"
-println selectedTitle1.author.collect { it.firstname.text() }
+selectedTitle1 = selectedTitle1.author.collect { it.firstname.text() }
+println selectedTitle1
 println "Step3"
 selectedTitle1.text()
 println "Step4"
