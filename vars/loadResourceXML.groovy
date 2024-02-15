@@ -1,4 +1,4 @@
-def call(Map selectedEnv) {
+def call(Map selectedEnv = [:]) {
 println "Selected Environment: ${selectedEnv.envName}"
 echo selectedEnv
 println("XML reading Starting")
