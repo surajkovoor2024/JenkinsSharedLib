@@ -1,0 +1,14 @@
+<environments>
+    <environment>
+      <name>DEV</name>
+    </environment>
+    <environment>
+      <name>QA</name>
+    </environment>
+    <environment>
+      <name>UAT</name>
+    </environment>
+    <environment>
+      <name>PROD</name>
+    </environment>  
+</environments>
