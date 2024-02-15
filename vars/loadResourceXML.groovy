@@ -11,7 +11,7 @@ def call(selectedEnv) {
             println props
 
             println "Get Methods"
-            def methods = selectedEnv.metaClass.methods.findAll { it.declaringClass == hudson.model.Environment }
+            def methods = selectedEnv.metaClass.methods.findAll { it.declaringClass == java.lang.String }
             // Print the list
             println methods
 
