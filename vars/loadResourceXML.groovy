@@ -22,9 +22,9 @@ def call(selectedEnv) {
             //return selectedCountryElement
             println "Step1"
             def selectedTitle  = xml.article.find { it.env == selectedEnv }
-            //println "Step1.1"
+            println "Step1.1"
             //selectedTitle = xml.article.find { it.env.text() == selectedEnv }.author.firstname.text()
-            //println selectedTitle
+            println selectedTitle
             println "Step1.2"
             def selectedTitle1 = xml.article.findAll { it.env.text() == selectedEnv }
             println selectedTitle1
