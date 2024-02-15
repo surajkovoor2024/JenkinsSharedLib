@@ -1,8 +1,8 @@
 def call() {
 println("XML reading Starting")
-def CountrysXmlFile = libraryResource('paramValues.xml')
-println CountrysXmlFile
-def xmlContent = CountrysXmlFile.text
+def xmlContent = libraryResource('paramValues.xml')
+println xmlContent
+//def xmlContent = CountrysXmlFile.text
 
 
 // Use XMLSlurper to parse the XML content
