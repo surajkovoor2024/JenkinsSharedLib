@@ -16,7 +16,7 @@ def call(selectedEnv) {
             println methods
 
 
-            println "Selected Environment: ${(String.valueOf(selectedEnv))}"
+            println "Selected Environment: ${(String.valueOf((selectedEnv as java.lang.String)))}"
 
             println("XML reading Starting")
             def xmlContent = libraryResource('paramValues.xml')
