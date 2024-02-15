@@ -1,12 +1,10 @@
-def call() {
+def call(String selectedEnv) {
+println "Selected Environment: ${selectedEnv}"
+
 println("XML reading Starting")
 def xmlContent = libraryResource('paramValues.xml')
 println xmlContent
-//def xmlContent = CountrysXmlFile.text
-
-
-// Use XMLSlurper to parse the XML content
-//def xml = new XmlSlurper().parseText(xmlContent)
+// Use XMLParser to parse the XML content
 def xml = new XmlParser().parseText(xmlContent)
 
 println("XML reading worked")
@@ -17,15 +15,15 @@ println xml.article.author.firstname
 println selectedCountryElement
 //return selectedCountryElement
 println "Step1"
-def selectedTitle  = xml.article.find { it.title == "Test" }
+def selectedTitle  = xml.article.find { it.env == selectedEnv }
 println "Step1.1"
-selectedTitle = xml.article.find { it.title.text() == "Test" }.author.firstname.text()
+selectedTitle = xml.article.find { it.env.text() == selectedEnv }.author.firstname.text()
 println selectedTitle
 println "Step1.2"
-def selectedTitle1 = xml.article.findAll { it.title.text() == "Test" }
+def selectedTitle1 = xml.article.findAll { it.env.text() == selectedEnv }
 println selectedTitle1
 println "Step2"
-selectedTitle1 = selectedTitle1.author.collect { it.firstname.text() }
+selectedTitle1 = selectedTitle1.author.collect { it.env.text() }
 println selectedTitle1
 println "Step3"
 return selectedTitle1//.author.firstname.collect { it.text() }
