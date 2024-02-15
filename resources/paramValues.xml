@@ -1,5 +1,6 @@
 <articles>
     <article>
+		<env>DEV</env>
         <title>First steps in Java</title>
         <author id="1">
             <firstname>Siena</firstname>
@@ -8,6 +9,7 @@
         <release-date>2018-12-01</release-date>
     </article>
     <article>
+		<env>QA</env>
         <title>Dockerize your SpringBoot application</title>
         <author id="2">
             <firstname>Jonas</firstname>
@@ -16,6 +18,7 @@
         <release-date>2018-12-01</release-date>
     </article>
     <article>
+		<env>DEV</env>
         <title>SpringBoot tutorial</title>
         <author id="3">
             <firstname>Daniele</firstname>
@@ -24,6 +27,7 @@
         <release-date>2018-06-12</release-date>
     </article>
     <article>
+		<env>PROD</env>
         <title>Java 12 insights</title>
         <author id="1">
             <firstname>Siena</firstname>
@@ -31,4 +35,31 @@
         </author>
         <release-date>2018-07-22</release-date>
     </article>
+	<article>
+		<env>UAT</env>		
+        <title>Test</title>
+        <author id="4">
+            <firstname>TestSiena</firstname>
+            <lastname>TestKerr</lastname>
+        </author>
+        <release-date>2018-12-01</release-date>
+    </article>
+	<article>
+		<env>PROD</env>	
+        <title>Test</title>
+        <author id="5">
+            <firstname>TestDaniele</firstname>
+            <lastname>TestFerguson</lastname>
+        </author>
+        <release-date>2018-12-01</release-date>
+    </article>
+	<article>
+		<env>DEV</env>	
+        <title>Test</title>
+        <author id="6">
+            <firstname>TestNitin</firstname>
+            <lastname>TestJain</lastname>
+        </author>
+        <release-date>2018-12-01</release-date>
+    </article>	
 </articles>
