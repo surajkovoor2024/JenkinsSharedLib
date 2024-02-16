@@ -32,9 +32,9 @@ def call(String selectedEnv) {
 
             println("XML reading worked")
             // Find the Country element based on the selected Country name
-            def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
-            println xml.article.author.firstname
-            println selectedCountryElement
+            //def selectedCountryElement = xml.article.author.firstname.collect { it.text() }
+            //println xml.article.author.firstname
+            //println selectedCountryElement
             //return selectedCountryElement
             //println "Step1"
             //def selectedTitle  = xml.article.find { it.env == selectedEnv }
@@ -45,7 +45,7 @@ def call(String selectedEnv) {
             def selectedTitle1 = xml.article.findAll { it.env.text() == selectedEnv }
             println selectedTitle1
             println "Step2"
-            selectedTitle1 = selectedTitle1.author.collect { it.env.text() }
+            selectedTitle1 = selectedTitle1.author.collect { it.firstname.text() }
             println selectedTitle1
             println "Step3"
             return selectedTitle1//.author.firstname.collect { it.text() }
