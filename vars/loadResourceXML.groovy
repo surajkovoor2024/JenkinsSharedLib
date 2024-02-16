@@ -1,4 +1,4 @@
-def call(String selectedEnv) {
+def call(String selectedEnv = 'DEV' ) {
     try{
         //bat "echo Hello ${selectedEnv.name}. Today is ${selectedEnv.dayOfWeek}."
         //def abc = selectedEnv.name
