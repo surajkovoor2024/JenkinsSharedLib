@@ -1,6 +1,6 @@
 def call(selectedEnv) {
     try{
-
+        println selectedEnv
         if (selectedEnv == null || selectedEnv == '') { 
             //If the condition is true print the following statement 
             println("Empty Environment");
