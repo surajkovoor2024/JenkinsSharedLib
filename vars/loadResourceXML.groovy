@@ -5,24 +5,24 @@ def call(String selectedEnv) {
         //println abc
         println ("Method Start: ${selectedEnv}")
         //println ("Method Start: ${selectedEnv.dayOfWeek}")
-        return ["Unknown Environment from Git"]
+        //return ["Unknown Environment from Git"]
         if (selectedEnv == null || selectedEnv == '' || selectedEnv == null ||  selectedEnv == '') { 
             //If the condition is true print the following statement 
             println("Empty Environment");
             return ["Unknown Environment from Git"]
         } else { 
             println ("Selected Environment ${selectedEnv}")
-            println "Get Prop"
-            def props = selectedEnv.properties
-            println props
+           // println "Get Prop"
+           // def props = selectedEnv.properties
+           // println props
 
-            println "Get Methods"
-            def methods = selectedEnv.metaClass.methods.findAll { it.declaringClass == java.lang.String }
+            //println "Get Methods"
+            //def methods = selectedEnv.metaClass.methods.findAll { it.declaringClass == java.lang.String }
             // Print the list
-            println methods
+            //println methods
 
 
-            println "Selected Environment: ${(String.valueOf((selectedEnv as java.lang.String)))}"
+           // println "Selected Environment: ${(String.valueOf((selectedEnv as java.lang.String)))}"
 
             println("XML reading Starting")
             def xmlContent = libraryResource('paramValues.xml')
