@@ -1,9 +1,9 @@
 <environments>
     <environment>
-      <name>QA</name>
+      <name>UAT</name>
     </environment>
     <environment>
-      <name>UAT</name>
+      <name>QA</name>
     </environment>
     <environment>
       <name>DEV</name>
