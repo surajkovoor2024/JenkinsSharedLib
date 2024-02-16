@@ -1,6 +1,6 @@
 def call(selectedEnv) {
     try{
-        def abc = selectedEnv as String
+        def abc = selectedEnv.value()
         println abc
         println ("Method Start: $selectedEnv")
         if (selectedEnv == null || selectedEnv == '') { 
