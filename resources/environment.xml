@@ -1,12 +1,12 @@
 <environments>
     <environment>
-      <name>PROD</name>
+      <name>DEV</name>
     </environment>
     <environment>
       <name>QA</name>
     </environment>
     <environment>
-      <name>DEV</name>
+      <name>PROD</name>
     </environment>
     <environment>
       <name>UAT</name>
