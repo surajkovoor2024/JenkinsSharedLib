@@ -1,5 +1,7 @@
 def call(selectedEnv) {
     try{
+        def abc = selectedEnv as String
+        println abc
         println ("Method Start: $selectedEnv")
         if (selectedEnv == null || selectedEnv == '') { 
             //If the condition is true print the following statement 
