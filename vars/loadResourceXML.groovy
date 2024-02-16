@@ -1,12 +1,12 @@
-def call(Map selectedEnv = [:]) {
+def call(String selectedEnv) {
     try{
-        bat "echo Hello ${selectedEnv.name}. Today is ${selectedEnv.dayOfWeek}."
-        def abc = selectedEnv.name
-        println abc
-        println ("Method Start: ${selectedEnv.name}")
-        println ("Method Start: ${selectedEnv.dayOfWeek}")
+        //bat "echo Hello ${selectedEnv.name}. Today is ${selectedEnv.dayOfWeek}."
+        //def abc = selectedEnv.name
+        //println abc
+        println ("Method Start: ${selectedEnv}")
+        //println ("Method Start: ${selectedEnv.dayOfWeek}")
         return ["Unknown Environment from Git"]
-        if (selectedEnv == null || selectedEnv == '' || selectedEnv.name == null ||  selectedEnv.name == '') { 
+        if (selectedEnv == null || selectedEnv == '' || selectedEnv == null ||  selectedEnv == '') { 
             //If the condition is true print the following statement 
             println("Empty Environment");
             return ["Unknown Environment from Git"]
