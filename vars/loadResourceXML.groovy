@@ -1,4 +1,4 @@
-def call(java.lang.String selectedEnv) {
+def call(selectedEnv) {
     try{
         println ("Method Start: $selectedEnv")
         if (selectedEnv == null || selectedEnv == '') { 
