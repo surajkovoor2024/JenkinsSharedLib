@@ -1,6 +1,6 @@
 <environments>
     <environment>
-      <name>UAT</name>
+      <name>PROD</name>
     </environment>
     <environment>
       <name>QA</name>
@@ -9,6 +9,6 @@
       <name>DEV</name>
     </environment>
     <environment>
-      <name>PROD</name>
+      <name>UAT</name>
     </environment>  
 </environments>
