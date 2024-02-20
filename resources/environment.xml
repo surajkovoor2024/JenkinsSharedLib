@@ -1,5 +1,8 @@
 <environments>
     <environment>
+      <name>None</name>
+    </environment>
+    <environment>
       <name>DEV</name>
     </environment>
     <environment>
