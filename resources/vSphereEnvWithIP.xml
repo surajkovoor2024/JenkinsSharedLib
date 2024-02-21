@@ -1,22 +1,22 @@
 <environments>
     <environment>
   		<name>DEV</name>
-      <ipaddr>10.206.1.1</ipaddr>
+        <ipaddr>10.206.1.1</ipaddr>
     </environment>
     <environment>
   		<name>QA</name>
-      <ipaddr>10.206.1.2</ipaddr>
+        <ipaddr>10.206.1.2</ipaddr>
     </environment>
     <environment>
   		<name>UAT</name>
-      <ipaddr>10.206.1.3</ipaddr>
+        <ipaddr>10.206.1.3</ipaddr>
     </environment>
     <environment>
   		<name>PROD</name>
-      <ipaddr>10.206.1.4</ipaddr>
+        <ipaddr>10.206.1.4</ipaddr>
     </environment>
   	<environment>
   		<name>PLAT</name>
-      <ipaddr>10.206.1.5</ipaddr>
+        <ipaddr>10.206.1.5</ipaddr>
     </environment>
 </environments>
