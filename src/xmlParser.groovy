@@ -5,7 +5,7 @@ class xmlParser {
            try{
                 println ("getEnvIP-Method Start: ${selectedEnv}")
                return "Hello from xml parser get env ip"
-                } 
+               
           }catch(Exception ex) {
                     println "getEnvIP-Error Block"
                     println selectedEnv
