@@ -28,7 +28,7 @@ def call(String selectedEnv) {
                     step = "getEnvIP-xml filter completed - ${envIP.size()}"
                     println(step)
                     envIP = envIP.find { it.ipaddr.text() }
-                    step = "getEnvIP-xml collect IP completed - ${envIP.size()}"
+                    step = "getEnvIP-xml collect IP completed - ${envIP.name}"
                     println(step)
                     return envIP
 					 } 
