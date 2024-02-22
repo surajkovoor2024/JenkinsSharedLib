@@ -1,6 +1,4 @@
 
-package xmlparserPackage
-
 class xmlParser {
     
     String getEnvIP(String selectedEnv) {
