@@ -2,7 +2,8 @@
 package xmlparser
 
 class xmlParser {
-    static String getEnvIP(String selectedEnv) {
+    
+    String getEnvIP(String selectedEnv) {
            try{
                 println ("Method Start: ${selectedEnv}")
                 if (selectedEnv == null || selectedEnv == '' || selectedEnv == null ||  selectedEnv == '') { 
