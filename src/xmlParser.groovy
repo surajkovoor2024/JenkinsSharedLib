@@ -1,5 +1,5 @@
 
-package xmlparser
+package xmlparserPackage
 
 class xmlParser {
     
