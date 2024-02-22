@@ -3,7 +3,7 @@ class xmlParser {
     
     String getEnvIP(String selectedEnv) {
            try{
-                println "getEnvIP-Method Start: ${selectedEnv}"
+                println "getEnvIP-Method Start"
                 return "Hello from xml parser get env ip ${selectedEnv}"
                
           }catch(Exception ex) {
