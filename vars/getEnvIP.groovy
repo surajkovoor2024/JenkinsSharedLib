@@ -23,10 +23,10 @@ def call(String selectedEnv) {
                     def xml = new XmlParser().parseText(xmlContent)
                     step = "getEnvIP-xml parsing completed"
                     println(step)
-                    def envIP = xml.environments.findAll { it.environment.text() == selectedEnv }
+                    def envIP = xml.environments.environment.find { it.name.text() == selectedEnv }
                     step = "getEnvIP-xml filter completed - ${envIP.size()}"
                     println(step)
-                    envIP = envIP.environment.find { it.ipaddr.text() }
+                    envIP = envIP.find { it.ipaddr.text() }
                     step = "getEnvIP-xml collect IP completed - ${envIP.size()}"
                     println(step)
                     return envIP
