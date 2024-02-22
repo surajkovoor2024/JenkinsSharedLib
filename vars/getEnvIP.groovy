@@ -1,23 +1,36 @@
 def call(String selectedEnv) {
     try{
-        def utils = new xmlParser()
-        println "getEnvIP Git called"
+        //def utils = new xmlParser()
+        //println "getEnvIP Git called"
        // String envIP = utils.getEnvIP(selectedEnv)
 
-    
-        def step = "getEnvIP-Start"
-           
-                if (selectedEnv == null || selectedEnv == '') { 
-                    return ["xmlParser-getEnvIP-If block from Git"]
-                } else {
+            def step = "getEnvIP-Start"
+        println step
+
+
+          if (selectedEnv == null || selectedEnv == '') { 
+                    //If the condition is true print the following statement 
+                    println("getEnvIP-Empty Environment");
+                    return ["getEnvIP-Unknown Environment from Git"]
+            } else { 
                     step = "getEnvIP-xml reading starting"
+                    println(step)
                     def xmlContent = libraryResource('vSphereEnvWithIP.xml')
                     step = "getEnvIP-xml reading completed"
+                    println(step)
+                    println xmlContent
+                    // Use XMLParser to parse the XML content
                     def xml = new XmlParser().parseText(xmlContent)
                     step = "getEnvIP-xml parsing completed"
-                    return ["xmlParser-getEnvIP-Else block from Git ${xmlContent}"]
-                }               
-          
+                    println(step)
+                    def envIP = xml.environments.findAll { it.environment.text() == selectedEnv }
+                    step = "getEnvIP-xml filter completed - ${envIP.size()}"
+                    println(step)
+                    envIP = envIP.environment.find { it.ipaddr.text() }
+                    step = "getEnvIP-xml collect IP completed - ${envIP.size()}"
+                    println(step)
+                    return envIP
+					 } 
     
 
         
