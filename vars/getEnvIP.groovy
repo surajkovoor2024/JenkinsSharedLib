@@ -25,9 +25,9 @@ def call(String selectedEnv) {
                     step = "getEnvIP-xml parsing completed"
                     println(step)
                     def envIP = xml.environment.find { it.name.text() == selectedEnv }
-                    step = "getEnvIP-xml filter completed}"
+                    step = "getEnvIP-xml filter completed"
                     println(step)
-		    println(envIP.size())
+		    println(envIP.ipaddr.text())
                     envIP = envIP.find { it.ipaddr.text() }
                     step = "getEnvIP-xml collect IP completed - ${envIP.name}"
                     println(step)
