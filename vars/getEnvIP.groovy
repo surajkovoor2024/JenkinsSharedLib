@@ -1,7 +1,8 @@
 def call(String selectedEnv) {
     try{
+        def utils = new xmlparser.xmlParser()
         println "getEnvIP Git called"
-        String envIP = xmlparser.xmlParser.getEnvIP(selectedEnv)
+        String envIP = utils.getEnvIP(selectedEnv)
         echo envIP
         if(envIP == '' || envIP == null) {
             return 'Not Found'
