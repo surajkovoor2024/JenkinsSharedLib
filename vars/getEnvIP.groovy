@@ -1,8 +1,9 @@
 def call(String selectedEnv) {
     try{
         println "getEnvIP Git called"
-        String envIP = xmlparser.xmlParser.getEnvIP(selectedEnv)
-        echo envIP
+        //String envIP = xmlparser.xmlParser.getEnvIP(selectedEnv)
+        //echo envIP
+        return "Hello ${selectedEnv}"
     } catch(Exception ex) {
         println "Error Block"
         println selectedEnv
