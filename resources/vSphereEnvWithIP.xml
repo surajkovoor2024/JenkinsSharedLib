@@ -1,5 +1,9 @@
 <environments>
     <environment>
+  		<name>None</name>
+        <ipaddr>0.0.0.0</ipaddr>
+    </environment>
+    <environment>
   		<name>DEV</name>
         <ipaddr>10.206.1.1</ipaddr>
     </environment>
