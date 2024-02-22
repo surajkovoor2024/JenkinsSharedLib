@@ -1,5 +1,5 @@
 def call(String selectedEnv) {
-	def step = "getEnvIP-Start"
+	def step = "getEnvIP-Start-${selectedEnv}"
     try{
         //def utils = new xmlParser()
         //println "getEnvIP Git called"
@@ -27,21 +27,19 @@ def call(String selectedEnv) {
                     def envIP = xml.environment.find { it.name.text() == selectedEnv }
                     step = "getEnvIP-xml filter completed"
                     println(step)
-		    println(envIP.ipaddr.text())
-                    envIP = envIP.find { it.ipaddr.text() }
-                    step = "getEnvIP-xml collect IP completed - ${envIP.name}"
+                    step = "getEnvIP-xml filtered IP - ${envIP.ipaddr.text()}"
                     println(step)
-                    return envIP
-					 } 
+		    envIP = envIP.ipaddr.text()
+		  if(envIP == '' || envIP == null) {
+            		return 'IP Not Found for ${selectedEnv} environment'
+        	  } else {
+            		return envIP            
+        	  }
+	} 
     
 
         
-        //echo envIP     
-        //if(envIP == '' || envIP == null) {
-        //    return 'Not Found'
-        //}else {
-          //  return envIP            
-        //}
+     
     } catch(Exception ex) {
         step = step + " " + ex.getMessage()
                     println "getEnvIP-Error Block"
