@@ -7,8 +7,6 @@ class xmlParser {
                     return ["xmlParser-getEnvIP-If block from Git"]
                 } else {
                     def xmlContent = libraryResource('vSphereEnvWithIP.xml')
-                    println xmlContent
-                    // Use XMLParser to parse the XML content
                     def xml = new XmlParser().parseText(xmlContent)
                     return ["xmlParser-getEnvIP-Else block from Git ${xml}"]
                 }               
