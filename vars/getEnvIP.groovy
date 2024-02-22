@@ -1,10 +1,11 @@
 def call(String selectedEnv) {
+	def step = "getEnvIP-Start"
     try{
         //def utils = new xmlParser()
         //println "getEnvIP Git called"
        // String envIP = utils.getEnvIP(selectedEnv)
 
-            def step = "getEnvIP-Start"
+            
         println step
 
 
@@ -23,7 +24,7 @@ def call(String selectedEnv) {
                     def xml = new XmlParser().parseText(xmlContent)
                     step = "getEnvIP-xml parsing completed"
                     println(step)
-                    def envIP = xml.environments.environment.find { it.name.text() == selectedEnv }
+                    def envIP = xml.environment.find { it.name.text() == selectedEnv }
                     step = "getEnvIP-xml filter completed - ${envIP.size()}"
                     println(step)
                     envIP = envIP.find { it.ipaddr.text() }
