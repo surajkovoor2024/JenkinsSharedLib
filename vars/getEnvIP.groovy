@@ -1,7 +1,8 @@
 def call(String selectedEnv) {
 	def step = "getEnvIP-Start-${selectedEnv}"
+	println step
     try{          
-        println step
+        
           if (selectedEnv == null || selectedEnv == '') { 
                     //If the condition is true print the following statement 
                     println("getEnvIP-Empty Environment");
@@ -28,11 +29,7 @@ def call(String selectedEnv) {
         	  } else {
             		return envIP            
         	  }
-	} 
-    
-
-        
-     
+	}  
     } catch(Exception ex) {
         step = step + " " + ex.getMessage()
                     println "getEnvIP-Error Block"
