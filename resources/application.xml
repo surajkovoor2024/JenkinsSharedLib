@@ -1,0 +1,12 @@
+<applications>
+  <name>WCF</name>
+  <name>WebServer</name>
+  <name>KMS</name>
+  <name>SSRS</name>
+  <name>RD</name>
+  <name>AppServer</name>
+  <name>PrimaryFileServer</name>
+  <name>SecondaryFileServer</name>
+  <name>DB</name>
+  <name>Demo</name>
+</applications>
