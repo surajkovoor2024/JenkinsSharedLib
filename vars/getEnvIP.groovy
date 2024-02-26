@@ -1,34 +1,27 @@
 def call(String selectedEnv) {
 	def step = "getEnvIP-Start-${selectedEnv}"
-    try{
-        //def utils = new xmlParser()
-        //println "getEnvIP Git called"
-       // String envIP = utils.getEnvIP(selectedEnv)
-
-            
+    try{          
         println step
-
-
           if (selectedEnv == null || selectedEnv == '') { 
                     //If the condition is true print the following statement 
                     println("getEnvIP-Empty Environment");
                     return ["getEnvIP-Unknown Environment from Git"]
             } else { 
-                    step = "getEnvIP-xml reading starting"
-                    println(step)
+                    //step = "getEnvIP-xml reading starting"
+                    //println(step)
                     def xmlContent = libraryResource('vSphereEnvWithIP.xml')
-                    step = "getEnvIP-xml reading completed"
-                    println(step)
-                    println xmlContent
+                    //step = "getEnvIP-xml reading completed"
+                    //println(step)
+                    //println xmlContent
                     // Use XMLParser to parse the XML content
                     def xml = new XmlParser().parseText(xmlContent)
-                    step = "getEnvIP-xml parsing completed"
-                    println(step)
+                    //step = "getEnvIP-xml parsing completed"
+                    //println(step)
                     def envIP = xml.environment.find { it.name.text() == selectedEnv }
-                    step = "getEnvIP-xml filter completed"
-                    println(step)
-                    step = "getEnvIP-xml filtered IP - ${envIP.ipaddr.text()}"
-                    println(step)
+                    //step = "getEnvIP-xml filter completed"
+                    //println(step)
+                    //step = "getEnvIP-xml filtered IP - ${envIP.ipaddr.text()}"
+                    //println(step)
 		    envIP = envIP.ipaddr.text()
 		  if(envIP == '' || envIP == null) {
             		return 'IP Not Found for ${selectedEnv} environment'
