@@ -5,7 +5,7 @@
     </environment>
     <environment>
   		<name>DEV</name>
-        <ipaddr>10.206.1.1</ipaddr>
+        <ipaddr>10.199.0.22</ipaddr>
     </environment>
     <environment>
   		<name>QA</name>
