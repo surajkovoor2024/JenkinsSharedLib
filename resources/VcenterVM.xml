@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environments>
+	<environment>
+		<name>Dev</name>
+
+		<vcenterip>10.206.13.15</vcenterip>
+		<vcenterusername></vcenterusername>
+		<vcenterpwd></vcenterpwd>
+		<ownername>CCGS</ownername>
+		<orgname>CCGS</orgname>
+		<timezones>
+			<timezone>
+				<name>India</name>
+				<zone>190</zone>
+			</timezone>
+			<timezone>
+				<name>US</name>
+				<zone>033</zone>
+			</timezone>
+		</timezones>
+		<autologon>5</autologon>
+		<domainname>devnewvisionsoftware.in</domainname>
+		<centralserver>10.206.1.116</centralserver>
+		<foldername>Local_MPODs_Package</foldername>
+	</environment>
+	<environment>
+		<name>Prod</name>
+		<vcenterip>10.206.13.16</vcenterip>
+		<vcenterusername></vcenterusername>
+		<vcenterpwd></vcenterpwd>
+		<ownername>CCGSprod</ownername>
+		<orgname>CCGSprod</orgname>
+		<timezones>
+			<timezone>
+				<name>India</name>
+				<zone>190</zone>
+			</timezone>
+			<timezone>
+				<name>US</name>
+				<zone>033</zone>
+			</timezone>
+		</timezones>
+		<autologon>5</autologon>
+		<domainname>prodnewvisionsoftware.in</domainname>
+		<centralserver>10.206.1.118</centralserver>
+		<foldername>Local_MPODs_Package</foldername>
+	</environment>
+</environments>
